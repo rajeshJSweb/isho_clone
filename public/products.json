@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Brera Center Table",
+      "price": 11821,
+      "image": "https://i.ibb.co/vBBbqhX/table.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Catalan Hexalights Candle Stand",
+      "price": 1990,
+      "image": "https://i.ibb.co/RD4Mw0h/catalan.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Brera Work Chair",
+      "price": 17710,
+      "image": "https://i.ibb.co/mtXQMmR/chair.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Oval Tray",
+      "price": 5390,
+      "image": "https://i.ibb.co/Pc2J69y/tray.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Brera Center Table",
+      "price": 11821,
+      "image": "https://i.ibb.co/DD30DmH/table-jpeg2.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Brera Work Chair",
+      "price": 17710,
+      "image": "https://i.ibb.co/mtXQMmR/chair.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Oval Tray",
+      "price": 5390,
+      "image": "https://i.ibb.co/Pc2J69y/tray.jpg"
+    }
+  ]
+}
