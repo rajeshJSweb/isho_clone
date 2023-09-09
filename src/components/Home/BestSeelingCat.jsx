@@ -8,56 +8,64 @@ import 'swiper/css/pagination';
 
 import { Autoplay, Navigation} from 'swiper/modules';
 import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const BestSeelingCat = () => {
-    const [products, setProducts]= useState([])
+    const {products, isLoading, isError} = useSelector(state => (state.products))
+    const navigate = useNavigate()
 
-    useEffect(()=>{
-        fetch('/products.json')
-        .then(res => res.json())
-        .then(data => setProducts(data.products))
-    },[])
-    
+
+    const filteredProducts=products.filter(product=>product.title.includes('Jacket'))
+
+    const handleProductClick=(productId)=>{
+        navigate(`/products/${productId.id}`)
+    }
+
     return (
-        <div className='mt-[100px]'>
-            <div className='md:mx-[76px] md:px-[30px]'>
-            <h1 className='text-center text-[25px] md:text-[36px] font-semibold mb-[75px]'>Best Selling Categories</h1>
-            <div className='mt-10 mb-7'>
-            <Swiper 
-                    slidesPerView={6}
+        <div className='relative mt-[100px] z-0'>
+            <div className='px-[20px] md:mx-[76px] md:px-[30px] '>
+            <h1 className='text-center text-[25px] md:text-[36px] font-semibold mb-[45px]'>All Jackets</h1>
+            <div className='my-10'>
+                <Swiper 
                     spaceBetween={15}
                     pagination={{clickable: true,}}
                     loop={true}
                     autoplay={{ delay: 3000 }}
                     breakpoints={{
-                        '@0.00': {
-                          slidesPerView: 2,
-                          spaceBetween: 10,
-                        },
-                        '@1.5': {
-                          slidesPerView: 4,
-                          spaceBetween: 20,
-                        },
+                        480: {
+                            slidesPerView: 1,
+                          },
+                          600: {
+                            slidesPerView: 2,
+                          },
+                          768: {
+                            slidesPerView: 4,
+                          },
                       }}
-                   modules={[Navigation,Autoplay]}>
-                    {products && products.map(product => <SwiperSlide 
-                    key={product.id}
-                    product={product}>
-                        <div className='w-[213px] md:w-[297px] cursor-pointer'>
-                                    <img  src='' alt="" />
+                   modules={[Autoplay]}
+                   
+                   >
+                    {
+                       filteredProducts&& filteredProducts.map(product => <SwiperSlide 
+                        className='grid justify-center items-center'
+                       key={product.id}
+                       product={product}>
+                               <div onClick={()=>handleProductClick(product)} className='cursor-pointer flex justify-center flex-col items-center h-[297px]'>
+                                    <img className='h-[200px] object-contain'  src={product.image} alt="" />
                                     <div className='flex flex-col justify-center items-center leading-6'>
-                                        <h1 className='mb-[10px] text-[16px] text-center leading-6'></h1>
-                                        <h1 className='text-[16px] font-semibold'>$</h1>
+                                        <h1 className='mb-[10px] text-[16px] text-center leading-6'>{product.title}</h1>
+                                        <h1 className='text-[16px] font-semibold'>${product.price}</h1>
                                     </div>
                                </div>
-                    </SwiperSlide>)}
+                        </SwiperSlide>
+                        )}
                 </Swiper>
             </div>
             <div className='mb-10 flex justify-center items-center'>
-                <button className='bg-blue-400 py-2 md:py-5 px-5 md:px-10 md:font-semibold text-white rounded-full'>View All Categories</button>
+                <Link to='/all_products' className='bg-blue-400 py-2 md:py-5 px-5 md:px-10 md:font-semibold text-white rounded-full'>View All Items</Link>
             </div>
-        </div>
+            </div>
         </div>
     );
 };

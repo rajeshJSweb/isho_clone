@@ -24,9 +24,7 @@ const Products = () => {
     const navigate = useNavigate()
 
     if (isLoading) {
-        return <div> <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-      </svg>
-      Processing...</div>;
+        return <div>Processing...</div>;
       }
       
       if (error) {
@@ -51,11 +49,11 @@ const Products = () => {
         navigate('/carts')
       }
 
-
       const specificProductInCart = addCart.find((item) => item.id === product.id);
 
     return (
         <div className='w-full'>
+            
             <div className='md:mx-[64px] px-[20px] md:px-[30px] md:flex mt-10 md:border-none border-t-[1px] border-gray-200 gap-10'>
                 <div className='md:w-6/12 flex justify-center items-center relative pt-2'>{product && <img className='w-[200px] transition-transform transform hover:scale-110' src={product.image}></img>}</div>
                 <div className='md:ml-[40px] md:w-6/12'>

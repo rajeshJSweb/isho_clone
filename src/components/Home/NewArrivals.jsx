@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Autoplay,} from 'swiper/modules';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductsAsync } from '../../features/productsSlice';
 
@@ -54,19 +54,19 @@ const NewArrivals = () => {
                         className='grid justify-center items-center'
                        key={product.id}
                        product={product}>
-                               <div onClick={()=>handleProductClick(product)} className='cursor-pointer flex justify-center flex-col items-center h-[300px]'>
-                                    <img className='h-[250px]'  src={product.image} alt="" />
+                               <div onClick={()=>handleProductClick(product)} className='cursor-pointer flex justify-center flex-col items-center h-[297px]'>
+                                    <img className='h-[200px] object-contain'  src={product.image} alt="" />
                                     <div className='flex flex-col justify-center items-center leading-6'>
                                         <h1 className='mb-[10px] text-[16px] text-center leading-6'>{product.title}</h1>
                                         <h1 className='text-[16px] font-semibold'>${product.price}</h1>
                                     </div>
                                </div>
-                        </SwiperSlide>)
-                    }
+                        </SwiperSlide>
+                        )}
                 </Swiper>
             </div>
             <div className='mb-10 flex justify-center items-center'>
-                <button className='bg-blue-400 py-2 md:py-5 px-5 md:px-10 md:font-semibold text-white rounded-full'>View All Items</button>
+                <Link to='/all_products' className='bg-blue-400 py-2 md:py-5 px-5 md:px-10 md:font-semibold text-white rounded-full'>View All Items</Link>
             </div>
             </div>
         </div>

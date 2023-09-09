@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Login from './components/User/Login/Login';
 import Products from './components/Products.jsx/Products';
 import Carts from './components/Carts/Carts';
+import AllProducts from './components/Products.jsx/AllProducts';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const App = () => {
         {
           path: '/carts',
           element: <Carts/>
+        },
+        {
+          path: '/all_products',
+          element: <AllProducts/>
         }
       ]
     }
