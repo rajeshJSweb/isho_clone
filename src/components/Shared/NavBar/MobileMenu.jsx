@@ -121,7 +121,7 @@ const MobileMenu = () => {
                                 {subcategory.items.map((item) => (
                                   <Link
                                     key={item}
-                                    to={`/some-route/${item}`}
+                                    to={`/category/${item}`}
                                     className="py-2"
                                   >
                                     {item}

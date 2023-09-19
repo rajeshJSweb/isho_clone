@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, buyNowProduct, incrementItem } from '../../features/addCartSlice';
+import RelatedProducts from '../RelatedProduct/RelatedProducts';
 
 
 const Products = () => {
@@ -54,7 +55,7 @@ const Products = () => {
     return (
         <div className='w-full'>
             
-            <div className='md:mx-[64px] px-[20px] md:px-[30px] md:flex mt-10 md:border-none border-t-[1px] border-gray-200 gap-10'>
+            <div className='md:mx-[64px] px-[20px] md:px-[30px] md:flex mt-10 md:border-none border-t-[1px] border-gray-200 gap-10 mb-[100px]'>
                 <div className='md:w-6/12 flex justify-center items-center relative pt-2'>{product && <img className='w-[200px] transition-transform transform hover:scale-110' src={product.image}></img>}</div>
                 <div className='md:ml-[40px] md:w-6/12'>
                     <div>
@@ -131,6 +132,7 @@ const Products = () => {
                </div>
                </div>
             </div>
+            <RelatedProducts/>
         </div>
     );
 };
