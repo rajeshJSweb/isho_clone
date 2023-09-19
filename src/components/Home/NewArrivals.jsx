@@ -16,6 +16,10 @@ const NewArrivals = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    if(isError){
+        return <div>Product is not found....</div>
+    }
+
     useEffect(() => {
         dispatch(fetchProductsAsync());
     }, []);
@@ -29,6 +33,9 @@ const NewArrivals = () => {
             <div className='px-[20px] md:mx-[76px] md:px-[30px] '>
                 <h1 className='text-center text-[25px] md:text-[36px] font-semibold mb-[45px]'>New Arrivals</h1>
                 <div className='my-10'>
+                {isLoading && <div className='flex justify-center items-center'>
+                    <h1 className='text-2xl'>Loading.....</h1>
+                    </div>}
                     <Swiper 
                         spaceBetween={15}
                         pagination={{ clickable: true }}
@@ -39,29 +46,30 @@ const NewArrivals = () => {
                             prevEl: '.swiper-button-prev',
                         }}
                         breakpoints={{
-                            480: {
-                                slidesPerView: 1,
-                            },
-                            600: {
+                            320: {
                                 slidesPerView: 2,
                             },
-                            768: {
-                                slidesPerView: 4,
+                            575: {
+                                slidesPerView: 3,
                             },
+                            990: {
+                                slidesPerView: 4,
+                            }
                         }}
                         modules={[Autoplay, Navigation]}
                     >
                         {products && products.map(product => (
                             <SwiperSlide
-                                className='grid justify-center items-center'
                                 key={product.id}
                                 product={product}
                             >
-                                <div onClick={() => handleProductClick(product)} className='cursor-pointer flex justify-center flex-col items-center h-[297px]'>
-                                    <img className='h-[200px] object-contain' src={product.image} alt="" />
-                                    <div className='flex flex-col justify-center items-center leading-6'>
-                                        <h1 className='mb-[10px] text-[16px] text-center leading-6'>{product.title}</h1>
-                                        <h1 className='text-[16px] font-semibold'>${product.price}</h1>
+                                <div onClick={()=> handleProductClick(product)}>
+                                    <div className='p-7 flex justify-center'>
+                                        <img className='h-[142px]' src={product.image} alt="" />
+                                    </div>
+                                    <div className='text-center'>
+                                        <h1 className='text-[16px]'>{product.title.slice(0,15)}</h1>
+                                        <p className='text-[16px] font-semibold'>${product.price}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>

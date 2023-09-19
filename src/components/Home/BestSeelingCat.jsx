@@ -33,16 +33,16 @@ const BestSeelingCat = () => {
                     loop={true}
                     autoplay={{ delay: 3000 }}
                     breakpoints={{
-                        480: {
-                            slidesPerView: 1,
-                          },
-                          600: {
+                        320: {
                             slidesPerView: 2,
-                          },
-                          768: {
+                        },
+                        575: {
+                            slidesPerView: 3,
+                        },
+                        990: {
                             slidesPerView: 4,
-                          },
-                      }}
+                        }
+                    }}
                    modules={[Autoplay]}
                    
                    >
@@ -51,13 +51,15 @@ const BestSeelingCat = () => {
                         className='grid justify-center items-center'
                        key={product.id}
                        product={product}>
-                               <div onClick={()=>handleProductClick(product)} className='cursor-pointer flex justify-center flex-col items-center h-[297px]'>
-                                    <img className='h-[200px] object-contain'  src={product.image} alt="" />
-                                    <div className='flex flex-col justify-center items-center leading-6'>
-                                        <h1 className='mb-[10px] text-[16px] text-center leading-6'>{product.title}</h1>
-                                        <h1 className='text-[16px] font-semibold'>${product.price}</h1>
+                               <div onClick={()=> handleProductClick(product)}>
+                                    <div className='p-7 flex justify-center'>
+                                        <img className='h-[142px]' src={product.image} alt="" />
                                     </div>
-                               </div>
+                                    <div className='text-center text-[16px] '>
+                                        <h1>{product.title.slice(0,15)}</h1>
+                                        <p className='font-semibold'>${product.price}</p>
+                                    </div>
+                                </div>
                         </SwiperSlide>
                         )}
                 </Swiper>

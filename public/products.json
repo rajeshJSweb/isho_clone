@@ -10,7 +10,10 @@
       "id": "2",
       "title": "Catalan Hexalights Candle Stand",
       "price": 1990,
-      "image": "https://i.ibb.co/RD4Mw0h/catalan.jpg"
+      "image": "https://i.ibb.co/RD4Mw0h/catalan.jpg",
+      "description": "lorem14",
+      "materials": "Wooden",
+      "dimension": "25Inch"
     },
     {
       "id": "3",

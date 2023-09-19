@@ -6,6 +6,8 @@ import Login from './components/User/Login/Login';
 import Products from './components/Products.jsx/Products';
 import Carts from './components/Carts/Carts';
 import AllProducts from './components/Products.jsx/AllProducts';
+import PersonalWorkSpace from './components/PersonalWorkSpace/PersonalWorkSpace';
+import UnwindingZone from './components/UnwindingZone/UnwindingZone';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -32,6 +34,14 @@ const App = () => {
         {
           path: '/all_products',
           element: <AllProducts/>
+        },
+        {
+          path: '/personal-workspace',
+          element: <PersonalWorkSpace/>
+        },
+        {
+          path: '/unwinding-zone',
+          element: <UnwindingZone/>
         }
       ]
     }

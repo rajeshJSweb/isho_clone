@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useGetProductsByIdQuery } from '../../features/apiSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductsAsync } from '../../features/productsSlice';
-import {GrNext} from 'react-icons/gr'
+import {GrNext,GrPrevious} from 'react-icons/gr'
 
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { Autoplay,} from 'swiper/modules';
@@ -12,7 +12,6 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../RelatedProduct/relatedProducts.css'
 
 const RelatedProducts = () => {
     const {productId}= useParams()
@@ -78,7 +77,7 @@ const RelatedProducts = () => {
                 >
                 {
                     relatedProduct&& relatedProduct.map(product=> <SwiperSlide product={product}>
-                        <div onClick={()=>hadnleSingleProduct(product)} className='flex flex-col items-center p-2 cursor-pointer shadow-md'>
+                        <div onClick={()=>hadnleSingleProduct(product)} className='flex flex-col items-center p-2 cursor-pointer shadow-md h-[350px]'>
                             <div className='w-[230px] h-[230px] flex justify-center items-center'>
                                 <img className='h-[230px]' src={product.image} alt="" />
                             </div>
@@ -89,10 +88,6 @@ const RelatedProducts = () => {
                         </div>
                     </SwiperSlide>)
                 }
-                <div className='cursor-pointer text-blue-600' onClick={handleNext}>
-                    <GrNext/>
-                </div>
-                <div className='' onClick={handlePrev}></div>
                 </Swiper>
                 
             </div>
