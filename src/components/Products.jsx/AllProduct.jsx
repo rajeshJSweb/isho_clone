@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductsAsync } from '../../features/productsSlice';
 import { useNavigate } from 'react-router-dom';
 
-const AllProduct = ({ selectedCategory }) => {
+const AllProduct = ({ selectedCategory}) => {
   const { products, isLoading, isError } = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const navigate = useNavigate();

@@ -5,7 +5,6 @@ import AllProduct from './AllProduct';
 const AllProducts = () => {
   const [isDivisionOpen, setIsDivisionOpen] = useState(false);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
-  const [selectedDivision, setSelectedDivision] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
 
   const divisions = ['Dhaka', 'Chittagong', 'Khulna', 'Rangpur'];
@@ -23,12 +22,10 @@ const AllProducts = () => {
 
   const all = 'All Category';
 
-  // Refs to capture clicks outside the dropdowns
   const categoryRef = useRef(null);
   const divisionRef = useRef(null);
 
   useEffect(() => {
-    // Function to handle clicks outside the category dropdown
     const handleCategoryClickOutside = (event) => {
       if (categoryRef.current && !categoryRef.current.contains(event.target)) {
         setIsCategoryOpen(false);
@@ -66,7 +63,7 @@ const AllProducts = () => {
           {isCategoryOpen && (
             <div
               className='h-[200px] w-[125px] overflow-y-scroll left-[95px] z-10 bg-slate-100 mt-3 absolute pt-4 px-3 shadow-xl rounded-md'
-              ref={categoryRef} // Assign the ref to the category dropdown
+              ref={categoryRef} 
             >
               <ul className='flex flex-col gap-2'>
                 {categories.map((category, index) => (
@@ -107,7 +104,7 @@ const AllProducts = () => {
           )}
         </div>
       </div>
-      <AllProduct selectedCategory={selectedCategory} />
+      <AllProduct selectedCategory={selectedCategory}/>
     </div>
   );
 };
