@@ -1,10 +1,8 @@
 import React from 'react';
-// import NavLinks from './NavLinks';
 import {BiSolidCartDownload} from 'react-icons/bi'
 import { useSelector } from 'react-redux';
 import MobileMenu from './MobileMenu';
 import { Link } from 'react-router-dom';
-// import DesktopMenu from './DesktopMenu';
 import DesktopDropDown from './DesktopDropDown';
 
 const Nav = () => {

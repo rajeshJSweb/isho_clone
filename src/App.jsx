@@ -2,12 +2,14 @@ import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Main from './layout/Main';
 import Home from './components/Home/Home';
-import Login from './components/User/Login/Login';
+import Login from './components/User/Login';
 import Products from './components/Products.jsx/Products';
 import Carts from './components/Carts/Carts';
 import AllProducts from './components/Products.jsx/AllProducts';
 import PersonalWorkSpace from './components/PersonalWorkSpace/PersonalWorkSpace';
 import UnwindingZone from './components/UnwindingZone/UnwindingZone';
+import Registration from './components/User/Registration';
+import ResetPassword from './components/User/ResetPassword';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -22,6 +24,14 @@ const App = () => {
         {
           path: '/login',
           element: <Login />
+        },
+        {
+          path:'/registration',
+          element:<Registration/>
+        },
+        {
+          path:'/password',
+          element:<ResetPassword/>
         },
         {
           path: '/products/:productId',

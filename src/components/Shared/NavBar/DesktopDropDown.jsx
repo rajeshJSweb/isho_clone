@@ -39,7 +39,7 @@ const DesktopDropDown = () => {
                 <ul className='flex gap-4 pl-10 text-[12px] font-semibold leading-6 tracking-wider'>
                     <li onMouseEnter={handleToggle}>PRODUCT</li>
                     <div className='flex gap-3 '>
-                        {subMenu.map(item => (
+                        {subMenu.map(item =>(
                             <Link to={item.links}>{item.name}</Link>
                         ))}
                     </div>

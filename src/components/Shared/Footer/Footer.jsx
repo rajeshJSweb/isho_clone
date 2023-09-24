@@ -7,7 +7,7 @@ const Footer = () => {
     return (
        <div className='bg-blue-50 pt-[67px] pb-[33px]'>
         <div className='md:flex md:mx-7 px-7'>
-            <div className='md:w-3/12 md:items-start flex md:flex-col gap-14'>
+            <div className='md:w-3/12 items-start flex justify-between md:flex-col'>
                 <div className='flex flex-col gap-5'>
                     <div>
                         <h1 className='text-[36px] font-semibold'>iSHO</h1>
@@ -27,7 +27,7 @@ const Footer = () => {
                         <p className='text-sm'>support@isho.com</p>
                     </div>
                 </div>
-                <div className='flex gap-2'>
+                <div className='flex gap-2 md:mt-5'>
                     <BsFacebook className='text-4xl cursor-pointer text-blue-400 rounded-full border-2 border-red-300 p-[1px]'/>
                     <AiFillInstagram className='text-4xl cursor-pointer rounded-full text-blue-400 border-2 border-red-300 p-[1px]'/>
                     <BsLinkedin className='text-4xl border-2 border-red-300 cursor-pointer p-[1px] rounded-full text-blue-400'/>

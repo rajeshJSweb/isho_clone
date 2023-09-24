@@ -5,6 +5,7 @@ import { removeFromCart } from '../../features/addCartSlice';
 
 const Carts = () => {
     const carts = useSelector(state => (state.addCart.cart))
+    const {user}= useSelector(state => state.login)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -14,8 +15,7 @@ const Carts = () => {
     const shippingCharge = 30;
     const subTotal = carts.reduce((total, item)=> total+item.quantity* item.price, 0)
     const totalAmount = subTotal + shippingCharge;
-
-
+    
     const handleRemove=(productId,subTotal)=>{
         if(productId || subTotal===0){
             const confirmed = window.confirm('Are are want to remove from cart')
@@ -33,6 +33,11 @@ const Carts = () => {
         if(subTotal>0){
             setOrderConfirmed(true)
             navigate('/login')
+            if(!user){
+                
+            }else{
+                alert('Your order submitted')
+            }
         }
         else{
             setIsEmptyCart(true)

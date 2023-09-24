@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BiSolidUser } from 'react-icons/bi';
 import { MdLocationOn } from 'react-icons/md';
 import { AiFillGift } from 'react-icons/ai';
 import { BiSolidShoppingBags } from 'react-icons/bi';
 import { BsFillTelephoneFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logOut } from '../../../features/logOutSlice';
 
 const TopNav = () => {
+  const {user}= useSelector(state => state.login)
+  const dispatch = useDispatch()
+
+  const navigate = useNavigate()
+
   const items = [
     {
       icon: <BiSolidShoppingBags />,
@@ -20,13 +27,18 @@ const TopNav = () => {
     {
       icon: <MdLocationOn />,
       name: 'Find Store',
-    },
-    {
-      icon: <BiSolidUser />,
-      name: 'Login',
-      link: '/login',
-    },
+    }
   ];
+
+  const handleLogout=(event)=>{
+    event.preventDefault()
+    dispatch(logOut())
+    .then(res=>{
+      if(res){
+        navigate('/login')
+      }
+    })
+  }
 
   return (
     <div className="pt-3 pb-2 md:block hidden">
@@ -47,6 +59,7 @@ const TopNav = () => {
               </Link>
             </div>
           ))}
+          {user? <Link onClick={handleLogout} className="text-[12px] cursor-pointer">Logout</Link>:<Link to='/login' className="text-[12px] cursor-pointer">Login</Link>}
         </div>
       </div>
     </div>
