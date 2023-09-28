@@ -1,154 +1,153 @@
 {
-    "menu": [
-      {
-        "name": "PRODUCTS",
-        "subcategories": [
-          {
-            "name": "Sofas",
-            "items": [
-              "1 Seater sofa",
-              "2 Seater sofa",
-              "3 Seater sofa",
-              "L shape sofas",
-              "Sofa with Chaise",
-              "Outdoor Sofas",
-              "Office Sofas",
-              "Sofa Cum Beds",
-              "Gaming Sofas",
-              "Corner Sofas",
-              "Divan",
-              "All Sofas"
-            ]
-          },
-          {
-            "name": "Chairs",
-            "items": [
-              "Dining Chairs",
-              "Executive Chair",
-              "Visitor's Chair",
-              "Arm Chairs",
-              "Office Chairs",
-              "Work Chairs",
-              "Lounge Chairs",
-              "Bar Chairs",
-              "Dressing Chairs",
-              "Kid's Chairs",
-              "Folding Chairs",
-              "Rocking Chairs",
-              "Slim Chairs",
-              "Outdoor Chairs",
-              "All Chairs"
-            ]
-          },
-          {
-            "name": "Tables",
-            "items": [
-              "Dining Chairs",
-              "Executive Chair",
-              "Visitor's Chair",
-              "Arm Chairs",
-              "Office Chairs",
-              "Work Chairs",
-              "Lounge Chairs",
-              "Bar Chairs",
-              "Dressing Chairs",
-              "Kid's Chairs",
-              "Folding Chairs",
-              "Rocking Chairs",
-              "Slim Chairs",
-              "Outdoor Chairs",
-              "All Chairs"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Bedroom",
-        "subcategories": [
-          {
-            "name": "Beds",
-            "items": [
-              "King Size Beds",
-              "Queen Size Beds",
-              "Upholstered Beds",
-              "Single Beds",
-              "Sofa Cum Bed",
-              "Kids Beds",
-              "Single Daybed",
-              "Double Daybed",
-              "All Beds"
-            ]
-          },
-          {
-            "name": "Bedding",
-            "items": [
-              "Bedsheets",
-              "Blankets & Throws",
-              "Bed Cushions",
-              "Duvets & Pillows",
-              "All Bedding"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "ISHO Bussiness",
-        "subcategories": [
-          {
-            "name": "Beds",
-            "items": [
-              "King Size Beds",
-              "Queen Size Beds",
-              "Upholstered Beds",
-              "Single Beds",
-              "Sofa Cum Bed",
-              "Kids Beds",
-              "Single Daybed",
-              "Double Daybed",
-              "All Beds"
-            ]
-          },
-          {
-            "name": "Bedding",
-            "items": [
-              "Bedsheets",
-              "Blankets & Throws",
-              "Bed Cushions",
-              "Duvets & Pillows",
-              "All Bedding"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Collections",
-        "subcategories": [
-          {
-            "name": "Beds",
-            "items": [
-              "King Size Beds",
-              "Queen Size Beds",
-              "Upholstered Beds",
-              "Single Beds",
-              "Sofa Cum Bed",
-              "Kids Beds",
-              "Single Daybed",
-              "Double Daybed",
-              "All Beds"
-            ]
-          },
-          {
-            "name": "Bedding",
-            "items": [
-              "Bedsheets",
-              "Blankets & Throws",
-              "Bed Cushions",
-              "Duvets & Pillows",
-              "All Bedding"
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "menu": [
+    {
+      "name": "PRODUCTS",
+      "subcategories": [
+        {
+          "name": "Sofas",
+          "items": [
+            "1 Seater sofa",
+            "2 Seater sofa",
+            "3 Seater sofa",
+            "L shape sofas",
+            "Sofa with Chaise",
+            "Outdoor Sofas",
+            "Office Sofas",
+            "Sofa Cum Beds",
+            "Gaming Sofas",
+            "Corner Sofas",
+            "Divan",
+            "All Sofas"
+          ]
+        },
+        {
+          "name": "Chairs",
+          "items": [
+            "Dining Chairs",
+            "Executive Chair",
+            "Visitor's Chair",
+            "Arm Chairs",
+            "Office Chairs",
+            "Work Chairs",
+            "Lounge Chairs",
+            "Bar Chairs",
+            "Dressing Chairs",
+            "Kid's Chairs",
+            "Folding Chairs",
+            "Rocking Chairs",
+            "Slim Chairs",
+            "Outdoor Chairs",
+            "All Chairs"
+          ]
+        },
+        {
+          "name": "Tables",
+          "items": [
+            "Dining Chairs",
+            "Executive Chair",
+            "Visitor's Chair",
+            "Arm Chairs",
+            "Office Chairs",
+            "Work Chairs",
+            "Lounge Chairs",
+            "Bar Chairs",
+            "Dressing Chairs",
+            "Kid's Chairs",
+            "Folding Chairs",
+            "Rocking Chairs",
+            "Slim Chairs",
+            "Outdoor Chairs",
+            "All Chairs"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bedroom",
+      "subcategories": [
+        {
+          "name": "Beds",
+          "items": [
+            "King Size Beds",
+            "Queen Size Beds",
+            "Upholstered Beds",
+            "Single Beds",
+            "Sofa Cum Bed",
+            "Kids Beds",
+            "Single Daybed",
+            "Double Daybed",
+            "All Beds"
+          ]
+        },
+        {
+          "name": "Bedding",
+          "items": [
+            "Bedsheets",
+            "Blankets & Throws",
+            "Bed Cushions",
+            "Duvets & Pillows",
+            "All Bedding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ISHO Bussiness",
+      "subcategories": [
+        {
+          "name": "Beds",
+          "items": [
+            "King Size Beds",
+            "Queen Size Beds",
+            "Upholstered Beds",
+            "Single Beds",
+            "Sofa Cum Bed",
+            "Kids Beds",
+            "Single Daybed",
+            "Double Daybed",
+            "All Beds"
+          ]
+        },
+        {
+          "name": "Bedding",
+          "items": [
+            "Bedsheets",
+            "Blankets & Throws",
+            "Bed Cushions",
+            "Duvets & Pillows",
+            "All Bedding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Collections",
+      "subcategories": [
+        {
+          "name": "Beds",
+          "items": [
+            "King Size Beds",
+            "Queen Size Beds",
+            "Upholstered Beds",
+            "Single Beds",
+            "Sofa Cum Bed",
+            "Kids Beds",
+            "Single Daybed",
+            "Double Daybed",
+            "All Beds"
+          ]
+        },
+        {
+          "name": "Bedding",
+          "items": [
+            "Bedsheets",
+            "Blankets & Throws",
+            "Bed Cushions",
+            "Duvets & Pillows",
+            "All Bedding"
+          ]
+        }
+      ]
+    }
+  ]
+}

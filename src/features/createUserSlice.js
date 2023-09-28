@@ -1,5 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+} from "firebase/auth";
 import app from "../firebase/firebase.config";
 
 const auth = getAuth(app);
@@ -8,31 +12,31 @@ const initialState = {
   user: null,
   isLoading: false,
   isError: null,
-  success:false,
-  message:''
+  success: false,
+  message: "",
 };
 
-export const createUser = createAsyncThunk("auth/createUser", async ({ email, password }) => {
-  try {
-    await createUserWithEmailAndPassword(auth, email, password);
-    await sendEmailVerification(auth.currentUser)
-    alert('Please check your email for verification link')
-  } catch (error) {
-    if(error.code ==="auth/email-already-in-use"){
-      return {error: 'Email already used by another account!'}
+export const createUser = createAsyncThunk(
+  "auth/createUser",
+  async ({ email, password }) => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      await sendEmailVerification(auth.currentUser);
+      alert("Please check your email for verification link");
+    } catch (error) {
+      if (error.code === "auth/email-already-in-use") {
+        return { error: "Email already used by another account!" };
+      } else if (error.code === "auth/invalid-email") {
+        return { error: "Enter a valid email address and password!" };
+      } else if (error.code === "auth/missing-password") {
+        return { error: "Please enter password!" };
+      } else if (error.code === "auth/weak-password") {
+        return { error: "Password should be at least 6 characters!" };
+      }
+      return { success: false, error: error.message };
     }
-    else if(error.code === "auth/invalid-email"){
-        return {error:'Enter a valid email address and password!'}
-    }
-    else if(error.code === "auth/missing-password"){
-        return {error:'Please enter password!'}
-    }
-    else if(error.code === "auth/weak-password"){
-        return {error:'Password should be at least 6 characters!'}
-    }
-    return { success: false, error: error.message };
   }
-});
+);
 
 const createUserSlice = createSlice({
   name: "auth",

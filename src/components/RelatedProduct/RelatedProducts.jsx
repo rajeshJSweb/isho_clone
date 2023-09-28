@@ -76,7 +76,7 @@ const RelatedProducts = () => {
                 }
                 >
                 {
-                    relatedProduct&& relatedProduct.map(product=> <SwiperSlide product={product}>
+                    relatedProduct&& relatedProduct.map(product=> <SwiperSlide key={product.id} product={product}>
                         <div onClick={()=>hadnleSingleProduct(product)} className='flex flex-col items-center p-2 cursor-pointer shadow-md h-[350px]'>
                             <div className='w-[230px] h-[230px] flex justify-center items-center'>
                                 <img className='h-[230px]' src={product.image} alt="" />
